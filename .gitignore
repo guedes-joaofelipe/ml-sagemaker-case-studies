@@ -2,3 +2,6 @@
 *.ipynb_checkpoints
 *.tag.gz
 *.zip
+*.txt
+*/json_energy_data
+__pycache__
