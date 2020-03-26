@@ -39,6 +39,7 @@ if __name__ == '__main__':
     parser.add_argument('--data-dir', type=str, default=os.environ['SM_CHANNEL_TRAIN'])
     
     ## TODO: Add any additional arguments that you will need to pass into your model
+    parser.add_argument('--model_name', type=str, default='SVM')
     
     # args holds all passed-in arguments
     args = parser.parse_args()
@@ -54,12 +55,14 @@ if __name__ == '__main__':
     
     ## --- Your code here --- ##
     
+    from sklearn import svm
 
     ## TODO: Define a model 
-    model = None
-    
-    
+    if args.model_name == 'SVM':
+        model = svm.SVC(decision_function_shape='ovo')
+        
     ## TODO: Train the model
+    model.fit(train_x, train_y)
     
     
     

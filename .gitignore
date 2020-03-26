@@ -3,5 +3,6 @@
 *.tag.gz
 *.zip
 *.txt
+Project_Plagiarism_Detection/data/
 */json_energy_data
 __pycache__
